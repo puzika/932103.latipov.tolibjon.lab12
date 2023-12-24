@@ -1,0 +1,31 @@
+html {
+    font-size: 14px;
+    font-family: Arial;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+.bold {
+    font-weight: 700;
+}

@@ -1,0 +1,18 @@
+﻿@{
+    var controller = ViewContext.RouteData.Values["Controller"] as string;
+    var action = ViewContext.RouteData.Values["Action"] as string;
+    var title = ViewData["Title"];
+}
+
+<h1>@title</h1>
+
+@using(Html.BeginForm(action, controller, FormMethod.Post))
+{
+    <div>@Html.TextBox("firstValue", "", new { type = "number" })</div>
+    
+    <div>@Html.DropDownList("operation", new SelectList(new[] { "+", "-", "*", "/" }))</div>
+
+    <div>@Html.TextBox("secondValue", "", new {type="number" })</div>
+
+    <input type="submit" value="Submit" />
+}
